@@ -4,11 +4,11 @@ class TicketsController < ApplicationController
         render json: Ticket.all, status: :ok
      end
     def create
-        ticket = Ticket.create!(ticket_params)
-         render json: ticket status: :created    
+        ticket = Ticket.create(ticket_params)
+         render json: ticket, status: :created   
      end
      def show
-        ticket = Ticket.find_by(id: params(:id))
+        ticket = Ticket.find_by(id: params[:id])
         if ticket
             render json: ticket
         else
@@ -39,7 +39,7 @@ class TicketsController < ApplicationController
   
     private
     def ticket_params
-        params.permit(:email, :name, :department_id, :phone_no, :summary, :description, category_id, priority, :notes, :status)
+        params.permit(:name, :department_id, :phone_no, :summary, :description, :category_id, :priority, :status)
     end
   def render_unproccessable_entity_response(error)
     render json: { errors: error.record.errors.full_messages }, status: :unprocessable_entity
