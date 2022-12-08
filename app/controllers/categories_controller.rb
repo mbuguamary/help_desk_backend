@@ -4,8 +4,8 @@ class CategoriesController < ApplicationController
         render json: Category.all, status: :ok
     end
     def create 
-        category = Category.create(cat_params)
-        render json : category, status: :ok
+        category = Category.create!(cat_params)
+        render json: category, status: :ok
     end
     private
  def cat_params
