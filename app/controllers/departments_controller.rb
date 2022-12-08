@@ -6,7 +6,7 @@ class DepartmentsController < ApplicationController
 
     def create
         department = Department.create(dept_params)
-        render json:department, status: :created
+        render json: department, status: :created
     end
 
     private
