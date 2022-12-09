@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   post "/login", to: "sessions#create"
   post "/destroy", to: "sessions#destroy"
+  delete "/users/:id", to: "users#destroy"
 end

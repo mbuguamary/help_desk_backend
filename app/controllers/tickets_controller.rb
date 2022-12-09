@@ -33,7 +33,7 @@ class TicketsController < ApplicationController
           ticket.destroy
           head :no_content
         else
-         render json: {error: "restaurant not found"}, status: :not_found
+         render json: {error: "Ticket not found"}, status: :not_found
         end
       end
   
