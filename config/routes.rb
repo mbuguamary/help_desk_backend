@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   post "departments", to: "departments#create"
   get "categories", to: "categories#index"
   post "categories", to: "categories#create"
-  get "/me", to: "users#show"
+  get "/signup", to: "users#index"
+  get "/users/:id", to: "users#show"
   post "/signup", to: "users#create"
   post "/login", to: "sessions#create"
-
+  post "/destroy", to: "sessions#destroy"
 end
