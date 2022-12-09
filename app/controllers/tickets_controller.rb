@@ -4,7 +4,7 @@ class TicketsController < ApplicationController
         render json: Ticket.all, status: :ok
      end
     def create
-        ticket = Ticket.create(ticket_params)
+        ticket = Ticket.create!(ticket_params)
          render json: ticket, status: :created   
      end
      def show
