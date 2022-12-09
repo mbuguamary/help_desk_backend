@@ -1,24 +1,40 @@
-# README
+## Technology Used
+ + (RUBY ON RAILS) - Used on the backend for Active Records-based API development.
+* Ruby version 2.74
+## Database
++ postgresql
+## Models
+* Tickets
+* Departments
+* Categories
++ ActiveRecord will manage the database relatonships.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## migrations
++ tickets
++ departments
++ categories
 
-Things you may want to cover:
+## ROUTES Methods and Actions
+## GET
++ /tickets: returns all tickets with specified columns
 
-* Ruby version
++ /tickets/:id: returns a specific ticket
++  /users/:id: returns a specific user
++ /categories: returns all categories
 
-* System dependencies
++ /departments: returns all departments
 
-* Configuration
+## PATCH
++ /tickets/:id: updates a specific ticket
 
-* Database creation
+## POST
++ /tickets/: creates a new department
++ /tickets/: creates a new ticket
++ /tickets/: creates a new category
++ /users/ : creates a new user
 
-* Database initialization
+## DELETE
++ /tickets/:id: deletes a specific ticket
+/users/:id: deletes a session
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
